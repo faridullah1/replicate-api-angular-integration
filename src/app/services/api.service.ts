@@ -9,7 +9,7 @@ import { Prediction } from '../models';
   providedIn: 'root'
 })
 export class ApiService {
-	private baseUrl = '/v1/predictions';
+	private baseUrl = environment.baseURL;
 	headers: HttpHeaders;
 
   	constructor(private http: HttpClient) {
