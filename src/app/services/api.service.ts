@@ -9,10 +9,12 @@ import { Prediction } from '../models';
   providedIn: 'root'
 })
 export class ApiService {
-	private baseUrl = '/v1/predictions';
+	private baseUrl = environment.baseURL;
 	headers: HttpHeaders;
 
   	constructor(private http: HttpClient) {
+		console.log('Base url =', this.baseUrl);
+		
 		this.headers = new HttpHeaders({
 			'Content-Type': 'application/json',
 			'Authorization': `Token ${environment.REPLICATE_API_TOKEN}`,
