@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 app.use(compression());
-app.use(cors())
+app.use(cors({ 'origin': 'https://api.replicate.com', credentials: true }))
 app.use(express.static(__dirname + '/dist/replicate-api-demo'));
 
 app.get('/*', (req, res) => {    
