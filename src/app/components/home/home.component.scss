@@ -1,0 +1,36 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	.form {
+		width: 80%;
+
+		.form-field {
+			width: 80%;
+		}
+	}
+
+	.output-container {
+		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+
+		.progress {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.success {
+			font-size: 1.5rem;
+			color: #6cc66c;
+			font-weight: 500;
+		}
+
+		.output-image {
+			margin-top: 2rem;
+		}
+	}
+}

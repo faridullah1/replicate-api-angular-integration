@@ -1,0 +1,23 @@
+<div class="container">
+	<form class="form">
+		<mat-form-field appearance="outline" class="form-field">
+			<mat-label>Prompt</mat-label>
+			<input type="text" matInput [formControl]="prompt">
+
+			<mat-error *ngIf="prompt.hasError('reqired')">
+				Prompt is required
+			</mat-error>
+		</mat-form-field>
+
+		<button class="ml-3" mat-raised-button color="primary" type="button" [disabled]="prompt.invalid || disableSaveBtn" (click)="onSubmit()">Submit</button>
+	</form>
+
+	<div class="output-container" *ngIf="prediction">
+		<div class="progress">
+			<mat-spinner *ngIf="!['succeeded', 'failed'].includes(prediction.status)" diameter="40"></mat-spinner>
+			<span style="margin-top: 1rem;" [class.success]="prediction.status === 'succeeded'">{{ prediction.status }}</span>
+		</div>
+
+		<img class="output-image" *ngIf="prediction.output" [src]="prediction.output[prediction.output.length - 1]" alt="Output">
+	</div>
+</div>

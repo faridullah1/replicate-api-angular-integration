@@ -1,0 +1,7 @@
+{
+	"/v1/predictions": {
+		"target": "https://api.replicate.com",
+		"secure": false,
+		"changeOrigin": true
+	}
+}
