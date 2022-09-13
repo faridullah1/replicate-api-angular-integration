@@ -26,7 +26,7 @@ export class HomeComponent {
 
 				while (this.prediction.status !== "succeeded" && this.prediction.status !== "failed") 
 				{
-					await this.sleep(1500);
+					await this.sleep(2000);
 
 					this.apiService.setPrediction(this.prediction.id).subscribe((resp: Prediction) => {
 						this.prediction = resp;
