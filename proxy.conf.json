@@ -1,6 +1,6 @@
 {
 	"/v1/predictions": {
-		"target": "https://api.replicate.com",
+		"target": "http://localhost:3000",
 		"secure": false,
 		"changeOrigin": true
 	}
